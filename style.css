@@ -93,5 +93,57 @@ footer p{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    height: auto;
+    width: 100%;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+body {
+  background: #2E282A;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+h2 {
+  color:black;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 20px;
+  color: #db3a34;
+}
+
+.bar {
+  width: 90%;
+  height: 35px;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  transition: all 2s linear;
+}
+
+.bar-1,
+.my-skills {
+  width: 80%;
+  margin: 10px auto 25px;
+}
+
+.bar-inner {
+  width: 0;
+  height: 35px;
+  line-height: 35px;
+  background: #db3a34;
+  border-radius: 5px 0 0 5px;
+}
+
+.bar-percent {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 18px;
 }
