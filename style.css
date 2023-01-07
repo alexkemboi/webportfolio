@@ -1,6 +1,9 @@
 nav div a {
     color: white;
 }
+.navbar-toggler{
+    color: white;
+}
 .container ul a {
     color: white;
 }
@@ -80,4 +83,15 @@ nav div a {
     margin: auto;
     padding: 10px;
 }
-
+footer p{
+    color: white;
+    margin: 10% 10% 0% 10%;
+    font-weight: bold;
+    font-size: 20px;
+}
+.repositories{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
