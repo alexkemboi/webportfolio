@@ -28,28 +28,13 @@ window.onscroll = function() {
             var statusHTML = '';
             $.each(data, function(i, status){
                 if(status.description){
-                    statusHTML += '<div class="card" style="margin:auto;padding:0px;border-radius:5px;border:1px solid black;width:18rem;height:auto;">\
-                    <h4 class="text-center">' + status.name.charAt(0).toUpperCase() + status.name.slice(1) +  '</h4> \
-                    <div class="card-body">\
-                        <span class="mr-4"><i class="fa fa-description mr-2"></i>' + status.description + '</span> \
-                        <br>\
-                        <button style="padding:5px;border-radius:5px;border:1px solid black"><a class="fa fa-github" href="'+status.clone_url+'">Clone repo</a></button>\
-                        <button style="padding:5px;border-radius:5px;border:1px solid black"><a class="fa fa-github" href="'+status.html_url+'">Open repo</a></button>\
-                    </div>\
-                </div>';
-                    // '<div class="col-lg-4 mt-4" style="margin:auto;padding:5px;border-radius:5px;border:1px solid black;justify-content:space-between">\
-                    //     <div class="card" style="padding:5px;border-radius:5px;border:1px solid green"> \
-                    //         <div class="card servicesText" style="padding:5px;border-radius:5px;border:1px solid yellow">\
-                    //             <h4 class="text-center">' + status.name +  '</h4> \
-                    //             <div class="card-body">\
-                    //                 <span class="mr-4"><i class="fa fa-description mr-2"></i>' + status.description + '</span> \
-                    //                 <br>\
-                    //                 <button style="padding:5px;border-radius:5px;border:1px solid black"><a class="fa fa-github" href="'+status.clone_url+'">Clone repo</a></button>\
-                    //                 <button style="padding:5px;border-radius:5px;border:1px solid black"><a class="fa fa-github" href="'+status.html_url+'">Open repo</a></button>\
-                    //             </div>\
-                    //         </div>\
-                    //     </div>\
-                    // </div>';
+                    statusHTML += 
+                    '<div style="padding:5px;justify-content:center;align-items:center;">\
+                        <h4 class="text-center">'+ status.name.charAt(0).toUpperCase() + status.name.slice(1)+'</h4>\
+                        <p>'+ status.description +'</p>\
+                        <button class="btn btn-dark"><a class="fa fa-github" href="'+status.html_url+'">Open Repo</a></button>\
+                        <p>Language:'+ status.language+'</p>\
+                    </div>';                    
                 }               
             });
             $('.repositories').html(statusHTML);

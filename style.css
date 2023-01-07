@@ -81,7 +81,7 @@ nav div a {
 }
 .contact div{
     margin: auto;
-    padding: 10px;
+    /* padding: 10px; */
 }
 footer p{
     color: white;
@@ -97,6 +97,18 @@ footer p{
     width: 100%;
 }
 
+.repositories div{
+    box-shadow: 0 15px 30px 1px grey;
+	background: rgba(255, 255, 255, 0.90);
+	text-align: center;
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 2em auto;
+	height: auto;
+	width: 18rem;
+    border-radius: 25px;
+}
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
 body {
@@ -104,7 +116,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.container {
+.containerskills {
   margin-top: 20px;
 }
 
