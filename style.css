@@ -78,6 +78,7 @@ nav div a {
 .imagealex{
     border: 1px solid black;
     border-radius: 50%;
+    margin-top: 100px;
 }
 .contact div{
     margin: auto;
@@ -89,7 +90,7 @@ footer p{
     font-weight: bold;
     font-size: 20px;
 }
-.repositories{
+/* .repositories{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -107,7 +108,7 @@ footer p{
 	height: auto;
 	width: 18rem;
     border-radius: 25px;
-}
+} */
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
@@ -127,7 +128,7 @@ h2 {
 .title {
   font-weight: bold;
   font-size: 20px;
-  color: #db3a34;
+  color: black;
 }
 
 .bar {
@@ -149,7 +150,7 @@ h2 {
   width: 0;
   height: 35px;
   line-height: 35px;
-  background: #db3a34;
+  background: black;
   border-radius: 5px 0 0 5px;
 }
 
