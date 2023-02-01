@@ -58,3 +58,12 @@ $(".bar").each(function () {
       2000
     );
 });
+
+function downloadCV() {
+  const link = document.createElement("a");
+  link.href = "/alex.pdf";
+  link.download = "your_cv.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
