@@ -8,13 +8,7 @@ nav div a {
     color: white;
 }
 
-/* hero background image */
-.bgimage {
-    height:100vh;
-    background-color: black;
-    background-size:cover;
-    position:relative;
-}
+
 /* text css above hero image*/
 .hero_title {
     font-size: 4.5rem;
@@ -78,7 +72,6 @@ nav div a {
 .imagealex{
     border: 1px solid black;
     border-radius: 50%;
-    margin-top: 100px;
 }
 .contact div{
     margin: auto;
@@ -90,26 +83,6 @@ footer p{
     font-weight: bold;
     font-size: 20px;
 }
-/* .repositories{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: auto;
-    width: 100%;
-}
-
-.repositories div{
-    box-shadow: 0 15px 30px 1px grey;
-	background: rgba(255, 255, 255, 0.90);
-	text-align: center;
-	border-radius: 5px;
-	overflow: hidden;
-	margin: 2em auto;
-	height: auto;
-	width: 18rem;
-    border-radius: 25px;
-} */
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
 body {

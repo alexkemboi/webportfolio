@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aportfolio</title>
     <link rel="stylesheet" href="style.css">
+
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
      <!-- bootstrap CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -16,100 +30,74 @@
 </head>
 <body>
    <div class="container">
-    <!-- <nav class="navbar bg-black">
-        <div class="container">
-            <a class="navbar-brand" href="#">Alex</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class=" fas fa-bars text-white"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link text-white" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#contact">Contact</a>
-                    </li>
-                </ul>
-                
-            </div>
-        </div>
-    </nav> -->
-
-
-
 
      <!-- Navbar componenet --> 
-     <nav class="navbar navbar-expand fixed-top bg-black container m-50"  id="navbar">
-        <a class="navbar-brand text-white" href="#">Alex</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+
+     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top container">
+        <a class="navbar-brand" href="#">Alex</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navlinksText collapse navbar-collapse ml-auto" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item active">
-                    <a class="nav-link text-white" href="#home">Home</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#about">About</a>
+                    <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#skills">Skills</a>
+                    <a class="nav-link" href="#skills">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#portfolio">Portfolio</a>
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#contact">Contact</a>
+                    <a class="nav-link" href="#contact">Contact</a>
                 </li>
+                <li >
+                    <a class="nav-link" href="#"  onclick="downloadCV()">Resume</a>
+                </li>      
+        
             </ul>
         </div>
       </nav>
+      
+
+
+ <!-- main banner -->
+ <section id="home" class="mt-5">
+    <div class="container card">
+        <div class="row bg-black mt-2">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center ">
+            <img class="imagealex"src="/images/alex.jpg" alt="Alex">
+            <h2 class="hero_title text-white">Hi, it's me Alex</h2>
+            <p class="hero_desc text-white">I am a professional Website developer in Nairobi,Kenya.</p> 
+            <button type="button" class="btn btn-secondary border-1-solid-white mb-5" onclick="downloadCV()"><i class="fas fa-file mr-1"></i>Resume</button>      
+         </div>
+        </div>            
+    </div>
+</section> 
+
     
-     <!-- main banner -->
-     <section class="bgimage" id="home">
-        <div class="container-fluid">
-            <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
-                <img class="imagealex "src="/images/alex.jpg" alt="">
-                <h2 class="hero_title">Hi, it's me Alex</h2>
-                <p class="hero_desc">I am a professional Website developer in Eldoret,Kenya</p> 
-                <button type="button" class="btn btn-primary" onclick="downloadCV()">Resume</button>               
-                
-            </div>
-            </div>
-            
-        </div>
-    </section> 
+
+
+
+   
+    
+    
 
     <!-- about section-->
     <section id="about">
-        <div class="container mt-4 pt-4">
+        <div class="container  pt-4">
             <h1 class="text-center">About Me</h1>
-            <div class="row mt-4">
+            <div class="row ">
                 <div class="col-lg-2">
                     <img src="images/devimage.jpg" class= "imageAboutPage" alt="">
                 </div>
 
                 <div class="col-lg-8">
-                    <p>  My name is Alex Kemboi. I’m a graduate of 2018 from Kisii University in Kenya
+                    <p>  My name is Alex Kemboi. I’m a graduate from Kisii University in Kenya
                          with a degree in Software Engineering. 
                          I'm most passionate about giving back to the community, 
                          and my goal is to pursue this passion within the field of software engineering.
@@ -122,7 +110,7 @@
                         <div class="col-md-6">
                             <ul>
                                 <li>Name: Alex Kemboi</li>
-                                <li>Age: 27</li>
+                                <li>Contacts: +254726837210</li>
                                 <li>Occupation: Web Developer</li>
 
                             </ul>
@@ -134,6 +122,8 @@
                 </div>
             </div>
     </section>
+
+
 <!-- services section-->
 <section id="skills">
     <div class="containerskills">
@@ -147,33 +137,41 @@
         </div>
 
         <div class="bar-1">
-            <div class="title" style="color: darkgray;">CSS3</div>
-            <div class="bar" data-width="85%">
-                <div class="bar-inner" style="background: darkgray;"></div>
-                <div class="bar-percent">85%</div>
+            <div class="title" style="color: blue;">CSS3</div>
+            <div class="bar" data-width="55%">
+                <div class="bar-inner" style="background: blue;"></div>
+                <div class="bar-percent">55%</div>
             </div>        
         </div>
         <div class="bar-1">
-            <div class="title" style="color:black;">Javascript</div>
+            <div class="title" style="color:gold;">Javascript</div>
             <div class="bar" data-width="60%">
-                <div class="bar-inner" style="background:black;"></div>
-                <div class="bar-percent">95%</div>
+                <div class="bar-inner" style="background:gold;"></div>
+                <div class="bar-percent">60%</div>
             </div>
         </div>
 
         <div class="bar-1">
-            <div class="title" style="color:grey">Bootstrap</div>
-            <div class="bar" data-width="75%">
-                <div class="bar-inner" style="background:grey;"></div>
-                <div class="bar-percent">75%</div>
+            <div class="title" style="color:purple">Bootstrap</div>
+            <div class="bar" data-width="61%">
+                <div class="bar-inner" style="background:purple;"></div>
+                <div class="bar-percent">61%</div>
+            </div>
+        </div>
+
+        <div class="bar-1">
+            <div class="title" style="color:skyblue">React</div>
+            <div class="bar" data-width="45%">
+                <div class="bar-inner" style="background:skyblue;"></div>
+                <div class="bar-percent">45%</div>
             </div>
         </div>
       </div>
 </section>
 
+
 <!-- portfolio section-->
-<section id="portfolio">       
-    
+<section id="portfolio">           
         <h1 class="text-center">Portfolio</h1>
         <div class="container ">
                 <div class=" repositories row">
@@ -185,8 +183,8 @@
                             <img src="/images/bankingapp.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h3 class="card-title text-sm">Banking App</h3>
-                                <p class="card-text text-sm">This an application used to register customers ,withdraw and deposit cash</p>
-                                <button class="btn btn-dark" type="button">Visit <i class="fas fa-shopping-cart"></i> </button>
+                                <p class="card-text text-sm">This application is used to register customers,withdraw & deposit cash</p>
+                                <button class="btn btn-dark text-centre" type="button">Visit <i class="fab fa-github"></i> </button>
                             </div>
                         </div>
                     </div>
@@ -196,8 +194,8 @@
                             <img src="/images/schoolapp.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h3 class="card-title text-sm">School App</h3>
-                                <p class="card-text text-sm">This apllication is used to register students,record the exams and anlyse</p>
-                                <button class="btn btn-dark" type="button">Visit <i class="fas fa-shopping-cart"></i> </button>
+                                <p class="card-text text-sm">This apllication is used to register students,record and analyse exams</p>
+                                <button class="btn btn-dark text-centre" type="button">Visit <i class="fab fa-github"></i> </button>
                             </div>
                         </div>
                     </div>
@@ -209,26 +207,22 @@
                             <div class="card-body">
                                 <h3 class="card-title text-sm">Portfolio</h3>
                                 <p class="card-text text-sm">This is a personal portfolio describing who iam and the projects i have done</p>
-                                <button class="btn btn-dark" type="button">Visit <i class="fas fa-shopping-cart"></i> </button>
+                                <button class="btn btn-dark text-centre" type="button">Visit <i class="fab fa-github"></i> </button>
                             </div>
                         </div>
                     </div>
-
-
                     <div class="col-lg-3">
                         <div class="card m-1">
                             <img src="/images/afrecommerce.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h3 class="card-title text-sm">Afrecommerce</h3>
-                                <p class="card-text text-sm">This an ecommerce to sell and buy african cloths,footware and accessories</p>
-                                <button class="btn btn-dark" type="button">Visit <i class="fas fa-shopping-cart"></i> </button>
+                                <p class="card-text text-sm">This an ecommerce to sell and buy african fashions</p>
+                                <button class="btn btn-dark text-centre" type="button">Visit <i class="fab fa-github"></i> </button>
                             </div>
                         </div>
                     </div>
-                </div>
-           
-        </div>
-        
+                </div>           
+        </div>        
 </section>
 
 <!-- footer section-->
@@ -242,16 +236,15 @@
         <div class="container-fluid">
             <!-- social media icons -->
             <div class="social-icons mt-4">
-                <a href="https://www.facebook.com/alexkemboi97" target="_blank"><i class="fab fa-facebook"></i></a>           
+                <a href="https://www.linkedin.com/in/alex-kemboi-9642a3166" target="_blank"><i class="fab fa-linkedin"></i></a>           
                 <a href="https://www.twitter.com/alexkemboi97" target="_blank"><i class="fab fa-twitter"></i></a>
                 <a href="https://www.github.com/alexkemboi" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </footer>
-
 </section>
 
-   </div>
+</div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script src="script.js"></script>

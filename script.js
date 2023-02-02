@@ -61,8 +61,8 @@ $(".bar").each(function () {
 
 function downloadCV() {
   const link = document.createElement("a");
-  link.href = "/alex.pdf";
-  link.download = "your_cv.pdf";
+  link.href = "/alexkemboicv.pdf";
+  link.download = "Alex_Kemboi.pdf";
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
