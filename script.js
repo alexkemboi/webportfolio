@@ -67,3 +67,11 @@ function downloadCV() {
   link.click();
   document.body.removeChild(link);
 }
+function downloadAbout() {
+  const link = document.createElement("a");
+  link.href = "/alexkemboiabout.pdf";
+  link.download = "Alex_Kemboi_About.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
