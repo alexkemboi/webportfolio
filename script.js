@@ -77,3 +77,17 @@ function downloadAbout() {
   link.click();
   document.body.removeChild(link);
 }
+function sendEmail() {
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var message = document.getElementById('message').value;
+
+  var body = 'Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message;
+
+  window.location.href = 'mailto:alexkemboi97@gmail.com?subject=Contact Form Submission&body=' + encodeURIComponent(body);
+}
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  sendEmail();
+});
