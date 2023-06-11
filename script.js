@@ -25,21 +25,23 @@ request.onload = function () {
   console.log(data);
   var statusHTML = "";
   $.each(data, function (i, status) {
-    if (status.description) {
+    if (status.name) {
       statusHTML += `<div class="col-12 col-md-3">
-    <div class="card m-1">
-        <img src="/images/portfolio2.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h3 class="card-title text-sm">${
-              status.name.charAt(0).toUpperCase() + status.name.slice(1)
-            }</h3>
-            <p class="card-text text-sm">Description:${status.description}</p>
-            <button class="btn btn-dark text-white" type="button"><a href="${
-              status.html_url
-            }" class="">Open repo</a><i></i> </button>
-        </div>
-    </div>        
-</div>`;
+      <div class="card m-1">
+          <img src="/images/portfolio2.jpg" class="card-img-top" alt="...">
+          <div class="card-body" style="max-height: 150px; overflow-y: auto;">
+              <h5 class="card-title text-sm">${status.name.toUpperCase()}</h5>
+              <p class="card-text text-sm">Description: ${
+                status.description
+              }</p>
+              <button class="btn btn-success text-white" type="button">
+                  <a href="${status.html_url}" class="text-white">Open repo</a>
+                  <i></i>
+              </button>
+          </div>
+      </div>
+  </div>
+  `;
     }
   });
   $(".repositories").html(statusHTML);
