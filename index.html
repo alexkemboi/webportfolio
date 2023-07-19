@@ -7,6 +7,10 @@
     <title>aportfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="./images/alex.jpg" type="image/jpg" />
+    <!-- Add these lines to the <head> section of your HTML file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
     <!-- Latest compiled and minified CSS -->
     <link
@@ -43,11 +47,11 @@
     ></script>
   </head>
   <body>
-    <div class="bg-light">
+    <div class="container">
       <!-- Navbar componenet -->
 
       <nav
-        class="navbar navbar-expand-lg navbar-light bg-success fixed-top"
+        class="navbar navbar-expand-lg navbar-light bg-success"
       >
         <a class="navbar-brand" href="#">Alex</a>
         <button
@@ -62,7 +66,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link text-light" href="#home">Home</a>
             </li>
@@ -88,9 +92,9 @@
       </nav>
 
       <!-- main banner -->
-      <section id="home" class="mt-5 bg-light">
+      <section id="home" class=" bg-light">
         <div class="card p-3 bg-light">
-          <div class="row mt-5 bg-light">
+          <div class="row  bg-light">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
               <img class="imagealex" src="/images/alex.jpg" alt="Alex" />
               <h2 class="hero_title text-dark">Habari, it's me Alex</h2>
@@ -166,72 +170,128 @@
               class="btn btn-success border-1-solid-black mt-1 m-auto"
               onclick="downloadAbout()"
             >
-              <i class="fas fa-file mr-1"></i>More
+              <i class="fas mr-2 fa-file text-light"></i>More
             </button>
           </div>
         </div>
       </section>
 
-      <!-- services section-->
-      <section id="skills">
-        <div class="containerskills p-4">
-          <h1 class="text-center">My Skills</h1>
-          <div class="bar-1">
-            <div class="title" style="color: black">HTML5</div>
-            <div class="bar" data-width="85%">
-              <div class="bar-inner bg-success"></div>
-              <div class="bar-percent">85%</div>
-            </div>
-          </div>
+      <!-- services section -->
+          <section id="skills">
+            <h1 class="text-center">My Skills</h1>
+            <div class="row m-auto justify-content-center m-150px">  
+              <div class="col-1">            
+                <div class="card">
+                  <div class="card-header">HTML5</div>
+                  <div class="card-body">
+                    <i class="fab fa-html5 text-danger fa-3x"></i>
+                  </div>
+                </div>
+              </div>    
+              
+              <div class="col-1">            
+                <div class="card">
+                  <div class="card-header">CSS3</div>
+                  <div class="card-body">
+                    <i class="fab fa-css3-alt text-primary fa-3x"></i>
+                  </div>
+                </div>
+              </div>
 
-          <div class="bar-1">
-            <div class="title" style="color: black">CSS3</div>
-            <div class="bar" data-width="70%">
-              <div class="bar-inner bg-success"></div>
-              <div class="bar-percent">70%</div>
-            </div>
-          </div>
-          <div class="bar-1">
-            <div class="title" style="color: black">Javascript</div>
-            <div class="bar" data-width="60%">
-              <div class="bar-inner bg-success"></div>
-              <div class="bar-percent">60%</div>
-            </div>
-          </div>
+              <div class="col-1">            
+                <div class="card">
+                  <div class="card-header">Javascript</div>
+                  <div class="card-body">
+                    <i class="fab fa-js text-warning fa-3x"></i>
+                  </div>
+                </div>
+              </div>
 
-          <div class="bar-1">
-            <div class="title" style="color: black">Bootstrap</div>
-            <div class="bar" data-width="61%">
-              <div class="bar-inner bg-success"></div>
-              <div class="bar-percent">61%</div>
-            </div>
-          </div>
+              <div class="col-1">            
+                <div class="card">
+                  <div class="card-header">Bootstrap</div>
+                  <div class="card-body">
+                    <i class="fas fa-briefcase text-purple fa-3x"></i>
+                  </div>
+                </div>
+              </div>
 
-          <div class="bar-1">
-            <div class="title" style="color: black">React</div>
-            <div class="bar" data-width="45%">
-              <div class="bar-inner bg-success"></div>
-              <div class="bar-percent">45%</div>
-            </div>
-          </div>
+              <div class="col-1">            
+                <div class="card">
+                  <div class="card-header">React</div>
+                  <div class="card-body">
+                    <i class="fab fa-react text-info fa-3x"></i>
+                  </div>
+                </div>
+              </div>
 
-          <div class="bar-1">
-            <div class="title" style="color: black">MySQL</div>
-            <div class="bar" data-width="75%">
-              <div class="bar-inner bg-success"></div>
-              <div class="bar-percent">75%</div>
-            </div>
-          </div>
+              <div class="col-1">            
+                <div class="card">
+                  <div class="card-header">MySQL</div>
+                  <div class="card-body">
+                    <i class="fas fa-database text-success fa-3x"></i>
+                  </div>
+                </div>
+              </div>
 
-          <div class="bar-1">
-            <div class="title" style="color: black">NodeJS</div>
-            <div class="bar" data-width="55%">
-              <div class="bar-inner bg-success"></div>
-              <div class="bar-percent">55%</div>
+              <div class="col-1">            
+                <div class="card">
+                  <div class="card-header">NodeJS</div>
+                  <div class="card-body">
+                    <i class="fab fa-node-js text-secondary fa-3x"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-1">            
+                <div class="card">
+                  <div class="card-header">Angular</div>
+                  <div class="card-body">
+                    <i class="fab fa-angular text-danger fa-3x"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-1">            
+                <div class="card">
+                  <div class="card-header">Azure DevOps</div>
+                  <div class="card-body">
+                    <i class="fas fa-cloud text-primary fa-2x"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-1">            
+                <div class="card">
+                  <div class="card-header">C#</div>
+                  <div class="card-body">
+                    <i class="fab fa-cuttlefish text-secondary fa-3x"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-1">            
+                <div class="card">
+                  <div class="card-header">ASP.NET</div>
+                  <div class="card-body">
+                    <i class="fas fa-code text-purple fa-3x"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-1">            
+                <div class="card">
+                  <div class="card-header">Git</div>
+                  <div class="card-body">
+                    <i class="fab fa-git text-info fa-3x"></i>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
+
+     
+
 
       <!-- portfolio section-->
       <section id="portfolio">
@@ -245,13 +305,13 @@
                   class="card-img-top"
                   alt="..."
                 />
-                <div class="card-body text-centre">
+                <div class="card-body text-center">
                   <h3 class="card-title text-sm">Banking App</h3>
                   <p class="card-text text-sm">
                     This application is used to register customers,withdraw &
                     deposit cash
                   </p>
-                  <button class="btn btn-success text-centre" type="button">
+                  <button class="btn btn-success text-center" type="button">
                     Visit <i class="fab text-light fa-github"></i>
                   </button>
                 </div>
@@ -265,13 +325,13 @@
                   class="card-img-top"
                   alt="..."
                 />
-                <div class="card-body text-centre">
+                <div class="card-body text-center">
                   <h3 class="card-title text-sm">School App</h3>
                   <p class="card-text text-sm">
                     This apllication is used to register students,record and
                     analyse exams
                   </p>
-                  <button class="btn btn-success text-centre" type="button">
+                  <button class="btn btn-success text-center" type="button">
                     Visit <i class="fab text-light fa-github"></i>
                   </button>
                 </div>
@@ -284,13 +344,13 @@
                   class="card-img-top"
                   alt="..."
                 />
-                <div class="card-body text-centre">
+                <div class="card-body text-center">
                   <h3 class="card-title text-sm">Portfolio</h3>
                   <p class="card-text text-sm">
                     This is a personal portfolio describing who iam and the
                     projects i have done
                   </p>
-                  <button class="btn btn-success text-centre m-auto" type="button">
+                  <button class="btn btn-success text-center m-auto" type="button">
                     Visit <i class="fab text-light fa-github"></i>
                   </button>
                 </div>
@@ -304,12 +364,12 @@
                   class="card-img-top"
                   alt="..."
                 />
-                <div class="card-body text-centre">
+                <div class="card-body text-center">
                   <h3 class="card-title text-sm">Afrecommerce</h3>
                   <p class="card-text text-sm">
-                    This an ecommerce to sell and buy african fashions
+                    This an ecommerce to sell and buy african fabhions
                   </p>
-                  <button class="btn btn-success text-centre m-auto" type="button">
+                  <button class="btn btn-success text-center m-auto" type="button">
                     Visit <i class="fab text-light fa-github"></i>
                   </button>
                 </div>
@@ -320,7 +380,7 @@
         </div>
       </section>
 
-      <section id="contact">
+      <section id="contact mt-4">
         <div class="card p-4">
           <h2 class="text-center">Contact Me</h2>
           <form id="contactForm" action="javascript:void(0);">
@@ -370,7 +430,7 @@
           </p>
           <div class="container-fluid">
             <!-- social media icons -->
-            <div class="social-icons mt-4">
+            <div class="social-icons ">
               <a
                 href="https://www.linkedin.com/in/alex-kemboi-9642a3166"
                 target="_blank"
