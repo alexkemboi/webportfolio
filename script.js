@@ -34,7 +34,7 @@ request.onload = function () {
               <p class="card-text text-sm">Description: ${
                 status.description
               }</p>
-              <button class="btn btn-success text-white" type="button">
+              <button class="btn btn-dark text-white" type="button">
                   <a href="${status.html_url}" class="text-white">Open repo</a>
                   <i></i>
               </button>
