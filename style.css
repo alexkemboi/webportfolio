@@ -8,7 +8,10 @@ nav div a {
     color: white;
 }
 
-
+.grow-on-hover:hover {
+    transform: scale(1.05); /* Increase the size by 5% on hover */
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
 /* text css above hero image*/
 .hero_title {
     font-size: 4.5rem;
@@ -134,8 +137,12 @@ h2 {
   font-size: 18px;
 }
 
-
-
+.bg-purple{
+    background-color:purple;
+}
+.text-purple{
+    color:purple;
+}
 .animated-background {
     
     background: linear-gradient(45deg, rgba(194, 190, 230, 0.7), rgba(255, 255, 255, 0.7), rgba(194, 231, 235, 0.7));
