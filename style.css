@@ -27,7 +27,7 @@ nav div a {
 /* about section image css */
 .imageAboutPage {
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid blue;
     border-radius: 50%;
 }
 /* services section css */
@@ -70,19 +70,19 @@ nav div a {
     text-align: center;
 }
 .imagealex{
-    border: 1px solid black;
+    border: 1px solid blue;
     border-radius: 50%;
 }
 .contact div{
     margin: auto;
     /* padding: 10px; */
 }
-footer p{
+/* footer p{
     color: white;
     margin:0 10% 0% 10%;
     font-weight: bold;
     font-size: 20px;
-}
+} */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
 body {
