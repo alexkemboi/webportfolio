@@ -91,3 +91,55 @@ document.getElementById('contactForm').addEventListener('submit', function(event
   event.preventDefault();
   sendEmail();
 });
+
+const elementsWithBgDark = document.querySelectorAll('.bg-dark');
+const elementsWithBtnDark = document.querySelectorAll('.btn-dark');
+const elementsWithTextWhite = document.querySelectorAll('.text-white');
+const elementsWithBorderWhite = document.querySelectorAll('.border-white');
+function toggleClasses() {
+    elementsWithBgDark.forEach(element => {
+        if (element.classList.contains('bg-dark')) {
+            element.classList.remove('bg-dark');
+            element.classList.add('bg-light');
+        } else {
+            element.classList.remove('bg-light');
+            element.classList.add('bg-dark');
+        }
+    });
+    elementsWithBtnDark.forEach(element => {
+      if (element.classList.contains('btn-dark')) {
+          element.classList.remove('btn-dark');
+          element.classList.add('btn-light');
+      } else {
+          element.classList.remove('btn-light');
+          element.classList.add('btn-dark');
+      }
+  });
+  elementsWithBorderWhite.forEach(element => {
+    if (element.classList.contains('border-white')) {
+      element.classList.remove('border-white');
+      element.classList.add('border-dark');
+  } else {
+      element.classList.remove('border-dark');
+      element.classList.add('border-white');
+  }
+});
+  elementsWithTextWhite.forEach(element => {
+    if (element.classList.contains('text-white')) {
+        element.classList.remove('text-white');
+        element.classList.add('text-dark');
+    } else {
+        element.classList.remove('text-dark');
+        element.classList.add('text-white');
+    }
+});
+}
+
+// Attach a click event listener to a button to trigger the toggle
+const button = document.getElementById('toggleButton'); // Replace 'toggleButton' with the actual ID of your button element
+button.addEventListener('click', toggleClasses);
+
+
+
+      
+        
