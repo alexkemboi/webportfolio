@@ -96,6 +96,7 @@ const elementsWithBgDark = document.querySelectorAll('.bg-dark');
 const elementsWithBtnDark = document.querySelectorAll('.btn-dark');
 const elementsWithTextWhite = document.querySelectorAll('.text-white');
 const elementsWithBorderWhite = document.querySelectorAll('.border-white');
+const elementsWithFaSun = document.querySelectorAll('.fa-sun');
 function toggleClasses() {
     elementsWithBgDark.forEach(element => {
         if (element.classList.contains('bg-dark')) {
@@ -133,6 +134,16 @@ function toggleClasses() {
         element.classList.add('text-white');
     }
 });
+elementsWithFaSun.forEach(element=>{
+  if(element.classList.contains('fa-sun')){
+    element.classList.remove('fa-sun');
+    element.classList.add('fa-moon');
+  }
+  else{
+    element.classList.remove('fa-moon');
+    element.classList.add('fa-sun');
+  }
+})
 }
 
 // Attach a click event listener to a button to trigger the toggle
