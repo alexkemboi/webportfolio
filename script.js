@@ -152,6 +152,41 @@ button.addEventListener('click', toggleClasses);
 
 
 
+
+const content = document.getElementById('content');
+const extraContent = document.getElementById('extra-content');
+const readMoreButton = document.getElementById('read-more-button');
+
+const maxWords = 10;
+let isReadMore = false;
+
+// Function to count words in a string
+function countWords(text) {
+    return text.split(/\s+/).filter(word => word).length;
+}
+
+// Function to toggle the "Read More" content
+function toggleReadMore() {
+    isReadMore = !isReadMore;
+    if (isReadMore) {
+        extraContent.style.display = 'block';
+        readMoreButton.textContent = 'Read Less';
+    } else {
+        extraContent.style.display = 'none';
+        readMoreButton.textContent = 'Read More';
+    }
+}
+
+// Initial setup
+const words = content.textContent.split(/\s+/).filter(word => word);
+if (words.length > maxWords) {
+    content.textContent = words.slice(0, maxWords).join(' ');
+    readMoreButton.style.display = 'block';
+}
+
+// Add event listener for the "Read More" button
+readMoreButton.addEventListener('click', toggleReadMore);
+
       
 
 
