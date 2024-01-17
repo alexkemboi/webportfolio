@@ -53,8 +53,7 @@ request.send();
 $(".bar").each(function () {
   $(this)
     .find(".bar-inner")
-    .animate(
-      {
+    .animate({
         width: $(this).attr("data-width"),
       },
       2000
@@ -69,6 +68,7 @@ function downloadCV() {
   link.click();
   document.body.removeChild(link);
 }
+
 function downloadAbout() {
   const link = document.createElement("a");
   link.href = "/alexkemboiabout.pdf";
@@ -77,6 +77,7 @@ function downloadAbout() {
   link.click();
   document.body.removeChild(link);
 }
+
 function sendEmail() {
   var name = document.getElementById('name').value;
   var email = document.getElementById('email').value;
@@ -87,7 +88,7 @@ function sendEmail() {
   window.location.href = 'mailto:alexkemboi97@gmail.com?subject=Contact Form Submission&body=' + encodeURIComponent(body);
 }
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
+document.getElementById('contactForm').addEventListener('submit', function (event) {
   event.preventDefault();
   sendEmail();
 });
@@ -97,53 +98,53 @@ const elementsWithBtnDark = document.querySelectorAll('.btn-dark');
 const elementsWithTextWhite = document.querySelectorAll('.text-white');
 const elementsWithBorderWhite = document.querySelectorAll('.border-white');
 const elementsWithFaSun = document.querySelectorAll('.fa-sun');
+
 function toggleClasses() {
-    elementsWithBgDark.forEach(element => {
-        if (element.classList.contains('bg-dark')) {
-            element.classList.remove('bg-dark');
-            element.classList.add('bg-light');
-        } else {
-            element.classList.remove('bg-light');
-            element.classList.add('bg-dark');
-        }
-    });
-    elementsWithBtnDark.forEach(element => {
-      if (element.classList.contains('btn-dark')) {
-          element.classList.remove('btn-dark');
-          element.classList.add('btn-light');
-      } else {
-          element.classList.remove('btn-light');
-          element.classList.add('btn-dark');
-      }
+  elementsWithBgDark.forEach(element => {
+    if (element.classList.contains('bg-dark')) {
+      element.classList.remove('bg-dark');
+      element.classList.add('bg-light');
+    } else {
+      element.classList.remove('bg-light');
+      element.classList.add('bg-dark');
+    }
+  });
+  elementsWithBtnDark.forEach(element => {
+    if (element.classList.contains('btn-dark')) {
+      element.classList.remove('btn-dark');
+      element.classList.add('btn-light');
+    } else {
+      element.classList.remove('btn-light');
+      element.classList.add('btn-dark');
+    }
   });
   elementsWithBorderWhite.forEach(element => {
     if (element.classList.contains('border-white')) {
       element.classList.remove('border-white');
       element.classList.add('border-dark');
-  } else {
+    } else {
       element.classList.remove('border-dark');
       element.classList.add('border-white');
-  }
-});
+    }
+  });
   elementsWithTextWhite.forEach(element => {
     if (element.classList.contains('text-white')) {
-        element.classList.remove('text-white');
-        element.classList.add('text-dark');
+      element.classList.remove('text-white');
+      element.classList.add('text-dark');
     } else {
-        element.classList.remove('text-dark');
-        element.classList.add('text-white');
+      element.classList.remove('text-dark');
+      element.classList.add('text-white');
     }
-});
-elementsWithFaSun.forEach(element=>{
-  if(element.classList.contains('fa-sun')){
-    element.classList.remove('fa-sun');
-    element.classList.add('fa-moon');
-  }
-  else{
-    element.classList.remove('fa-moon');
-    element.classList.add('fa-sun');
-  }
-})
+  });
+  elementsWithFaSun.forEach(element => {
+    if (element.classList.contains('fa-sun')) {
+      element.classList.remove('fa-sun');
+      element.classList.add('fa-moon');
+    } else {
+      element.classList.remove('fa-moon');
+      element.classList.add('fa-sun');
+    }
+  })
 }
 
 // Attach a click event listener to a button to trigger the toggle
@@ -152,7 +153,37 @@ button.addEventListener('click', toggleClasses);
 
 
 
-      
 
+const content = document.getElementById('content');
+const extraContent = document.getElementById('extra-content');
+const readMoreButton = document.getElementById('read-more-button');
 
-  
+const maxWords = 10;
+let isReadMore = false;
+
+// Function to count words in a string
+function countWords(text) {
+  return text.split(/\s+/).filter(word => word).length;
+}
+
+// Function to toggle the "Read More" content
+function toggleReadMore() {
+  isReadMore = !isReadMore;
+  if (isReadMore) {
+    extraContent.style.display = 'block';
+    readMoreButton.textContent = 'Read Less';
+  } else {
+    extraContent.style.display = 'none';
+    readMoreButton.textContent = 'Read More';
+  }
+}
+
+// Initial setup
+const words = content.textContent.split(/\s+/).filter(word => word);
+if (words.length > maxWords) {
+  content.textContent = words.slice(0, maxWords).join(' ');
+  readMoreButton.style.display = 'block';
+}
+
+// Add event listener for the "Read More" button
+readMoreButton.addEventListener('click', toggleReadMore);
