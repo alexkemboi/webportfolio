@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-dark">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -29,11 +29,11 @@
   <script type="module" src="node_modules/lord-icon-element/lord-icon-element.js"></script>
 </head>
 
-<body class="bodyStyle">
-  <div class="container border border-gray text-center" style="background-color: #2C3539;">
+<body class="border border-gray bg-dark m-2 text-center">
+  
 
 
-    <div class=" mt-2 d-none d-md-flex flex-column flex-md-row align-items-center" style="background-color: #2C3539;">
+    <div class=" mt-2 d-none d-md-flex flex-column flex-md-row align-items-center m-4" >
       <div class="text-right ml-auto">
 
         <small class="text-white mb-2 mb-md-0">&nbsp;<i class="fa fa-map-marker-alt me-2"></i>Alex Kemboi, Nairobi,
@@ -46,15 +46,15 @@
     </div>
 
     <!-- Navbar componenet -->
-    <nav class="navbar navbar-expand-lg navbar-dark text-center " style="background-color: #2C3539;">
+    <nav class="navbar navbar-expand-lg  navbar-dark text-center m-4">
       <a id="toggleButton"><i class="text-white fas fa-bulb fa-sun fa-2x mr-2"></i></a>
       <!-- <a class="navbar-brand text-white" href="#">Alex Kemboi</a> -->
       <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <spa><i class="fas fa-solid fa-bars"></i></span>
       </button>
-      <div class="collapse navbar-collapse s" id="navbarNav">
-        <ul class="navbar-nav ml-auto border rounded-pill">
+      <div class="collapse navbar-collapse " id="navbarNav" >
+        <ul class="navbar-nav ml-auto border border-white rounded-pill">
 
           <li class="nav-item">
             <a class="nav-link text-white" href="#home">Home</a>
@@ -80,26 +80,26 @@
     </nav>
 
     <!-- main banner -->
-    <section id="home" style="background-color: #2C3539;">
-      <div class="card border border-dark border-0 " style="background-color: #2C3539;">
+    <section id="home" class="m-4 bg-dark">
+      <div class="card border border-dark border-0 bg-dark">
         <div class="card-content">
-          <div class="row">
+          <div class="col">
             <!-- Adjust column sizes for different screen sizes -->
-            <div class=" col-xl-3 col-lg-4 col-12" style="background-color: #2C3539;">
-              <div class=" text-center" style="background-color: #2C3539;">
-                <img class="imagealex m-2 img-fluid" src="./images/alex.jpg" alt="Alex" />
+            <div class=" col-12">
+              <div class=" text-center">
+                <img class="imagealex m-2 img-fluid w-25" src="./images/alex.jpg" alt="Alex" />
               </div>
             </div>
-            <div class=" col-xl-9 col-lg-8 col-12" style="background-color: #2C3539;">
-              <div class="text-center  rounded-right " style="background-color: #2C3539;">
-                <h4 class="hero_title text-success fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">
-                  Habari</h4>
+            <div class=" col-12">
+              <div class="text-center  rounded-right ">
+                <!-- <h4 class="hero_title  fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long" style="color: #caf0f8;">
+                  Habari</h4> -->
                 <p class="hero_desc text-white fs-4xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">
                   It's me Alex,I am a professional Software developer in Nairobi, Kenya.
                 </p>
 
                 <button type="button" class="btn btn-dark text-white border-white m-3 grow-on-hover"
-                  onclick="downloadCV()" style="background-color: #2C3539;">
+                  onclick="downloadCV()">
                   <i class="fas fa-file mr-1"></i>Resume
                 </button>
                 <div class="container-fluid">
@@ -126,7 +126,7 @@
 
     <!-- about section-->
     <section id="about">
-      <div style="background-color: #2C3539;">
+      <div>
         <div class="p-4 ">
           <h1
             class="text-center text-white  w-50 p-3 rounded-pill m-auto fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">
@@ -163,8 +163,8 @@
 
     <!-- skills section -->
     <section id="skills" class="mt-3">
-      <div class="card border border-dark border-0" style="background-color: #2C3539;">
-        <div class="card-header " style="background-color: #2C3539;">
+      <div class="card border border-dark bg-dark border-0">
+        <div class="card-header ">
           <h1
             class="text-center text-white  w-50  rounded-pill mr-auto ml-auto fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long ">
             My Skills</h1>
@@ -625,22 +625,22 @@
 
 
     <!-- portfolio section-->
-    <section id="portfolio" style="background-color: #2C3539;">
-      <div class="card h-100 w-100  border border-dark border-0 mt-2 mb-2" style="background-color: #2C3539;">
+    <section id="portfolio">
+      <div class="card h-100 w-100  border border-dark bg-dark border-0 mt-2 mb-2">
         <div class="card-header ">
-          <h1 class="card-title text-white fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">Portfolio
+          <h1 class="card-title text-white text-white fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">Portfolio
           </h1>
         </div>
-        <div class="card-body text-center ">
+        <div class="card-body text-center bg-dark ">
           <p class="container">
           <div class="row">
             <div class="col-12 col-sm-6 col-lg-3 mt-3">
               <div class="card grow-on-hover h-100 w-100">
                 <img src="./images/bankingapp.jpg" class="card-img-top" alt="..." />
-                <div class="card-body text-center">
-                  <h3 class="card-title text-sm fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">Banking
+                <div class="card-body text-center bg-dark">
+                  <h3 class="card-title text-white text-sm fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">Banking
                     App</h3>
-                  <p class="card-text text-sm">
+                  <p class="card-text text-sm text-white bg-dark">
                     This application is used to register customers,withdraw &
                     deposit cash
                   </p>
@@ -652,10 +652,10 @@
             <div class="col-12 col-sm-6 col-lg-3 mt-3">
               <div class="card grow-on-hover h-100 w-100">
                 <img src="./images/schoolapp.jpg" class="card-img-top" alt="..." />
-                <div class="card-body text-center">
-                  <h3 class="card-title text-sm fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">School
+                <div class="card-body text-center bg-dark">
+                  <h3 class="card-title text-white text-sm fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">School
                     App</h3>
-                  <p class="card-text text-sm">
+                  <p class="card-text text-sm text-white bg-dark">
                     This application is used to register students,record and
                     analyse exams
                   </p>
@@ -666,10 +666,10 @@
             <div class="col-12 col-sm-6 col-lg-3 mt-3">
               <div class="card grow-on-hover h-100 w-100">
                 <img src="./images/portfolioApp.jpg" class="card-img-top" alt="..." />
-                <div class="card-body text-center">
-                  <h3 class="card-title text-sm fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">
+                <div class="card-body text-center bg-dark">
+                  <h3 class="card-title text-white text-sm fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">
                     Portfolio</h3>
-                  <p class="card-text text-sm">
+                  <p class="card-text text-sm text-white bg-dark">
                     This is a personal portfolio describing who iam and the
                     projects i have done
                   </p>
@@ -681,10 +681,10 @@
             <div class="col-12 col-sm-6 col-lg-3 mt-3">
               <div class="card grow-on-hover h-100 w-100">
                 <img src="./images/afrecommerce.jpg" class="card-img-top" alt="..." />
-                <div class="card-body text-center">
-                  <h3 class="card-title text-sm fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">
+                <div class="card-body text-center bg-dark">
+                  <h3 class="card-title text-white text-sm fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">
                     Afrecommerce</h3>
-                  <p class="card-text text-sm">
+                  <p class="card-text text-sm text-white bg-dark">
                     This an ecommerce to sell and buy african fabhions
                   </p>
 
@@ -694,10 +694,10 @@
             <div class="col-12 col-sm-6 col-lg-3 mt-3">
               <div class="card grow-on-hover h-100 w-100 animated-background">
                 <img src="./images/kusuweb.jpg" class="card-img-top" alt="..." />
-                <div class="card-body text-center">
-                  <h3 class="card-title text-sm fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">KUSU
+                <div class="card-body text-center bg-dark">
+                  <h3 class="card-title text-white text-sm fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">KUSU
                     Website</h3>
-                  <p class="card-text text-sm">
+                  <p class="card-text text-sm text-white bg-dark">
                     This a students website for shairing information and distributing bursaries and work study jobs
                   </p>
 
@@ -707,10 +707,10 @@
             <div class="col-12 col-sm-6 col-lg-3 mt-3">
               <div class="card grow-on-hover h-100 w-100">
                 <img src="./images/certs.PNG" class="card-img-top" alt="..." />
-                <div class="card-body text-center">
-                  <h3 class="card-title text-sm fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">Clinical
+                <div class="card-body text-center bg-dark">
+                  <h3 class="card-title text-white text-sm fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">Clinical
                   </h3>
-                  <p class="card-text text-sm">
+                  <p class="card-text text-sm text-white bg-dark">
                     This a clinical education system for placing students in their rotaion areas.
                   </p>
 
@@ -720,10 +720,10 @@
             <div class="col-12 col-sm-6 col-lg-3 mt-3">
               <div class="card grow-on-hover h-100 w-100">
                 <img src="./images/caro.PNG" class="card-img-top" alt="..." />
-                <div class="card-body text-center">
-                  <h3 class="card-title text-sm fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">Carolyne
+                <div class="card-body text-center bg-dark">
+                  <h3 class="card-title text-white text-sm fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">Carolyne
                     Kimeto</h3>
-                  <p class="card-text text-sm">
+                  <p class="card-text text-sm text-white bg-dark">
                     This Carolyne's personal portfolio for writing her bloggs and managing her studies
                   </p>
 
@@ -733,10 +733,10 @@
             <div class="col-12 col-sm-6 col-lg-3 mt-3">
               <div class="card grow-on-hover h-100 w-100">
                 <img src="./images/foodcloud.PNG" class="card-img-top" alt="..." />
-                <div class="card-body text-center">
-                  <h3 class="card-title text-sm fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">
+                <div class="card-body text-center bg-dark">
+                  <h3 class="card-title text-white text-sm fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">
                     Foodcloud</h3>
-                  <p class="card-text text-sm">
+                  <p class="card-text text-sm text-white bg-dark">
                     This a market place for selling and buying food waste at affordable prices.
                   </p>
 
@@ -746,7 +746,7 @@
 
           </div>
           </p>
-          <button class="btn  text-white border-white text-center" style="background-color: #2C3539;" type="button">
+          <button class="btn  text-white border-white text-center" type="button">
             Contact
           </button>
         </div>
@@ -766,7 +766,7 @@
             <div class="card">
               <img src="https://placekitten.com/300/200" class="card-img-top" alt="Blog Post 1 Image">
               <div class="card-body">
-                <h5 class="card-title">Blog Post 1 Title</h5>
+                <h5 class="card-title text-white">Blog Post 1 Title</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at quam vel nulla
                   tincidunt feugiat.</p>
                 <a href="#" class="btn btn-dark">Read More</a>
@@ -779,7 +779,7 @@
             <div class="card">
               <img src="https://placekitten.com/300/201" class="card-img-top" alt="Blog Post 2 Image">
               <div class="card-body">
-                <h5 class="card-title">Blog Post 2 Title</h5>
+                <h5 class="card-title text-white">Blog Post 2 Title</h5>
                 <p class="card-text">Sed euismod euismod tortor, id fringilla arcu venenatis vel. Ut auctor orci nec
                   ligula congue tincidunt.</p>
                 <a href="#" class="btn btn-dark">Read More</a>
@@ -792,7 +792,7 @@
             <div class="card">
               <img src="https://placekitten.com/300/202" class="card-img-top" alt="Blog Post 3 Image">
               <div class="card-body">
-                <h5 class="card-title">Blog Post 3 Title</h5>
+                <h5 class="card-title text-white">Blog Post 3 Title</h5>
                 <p class="card-text">Phasellus consectetur mi a sem fermentum, vel posuere nunc ultrices. Integer vel mi
                   vestibulum, aliquam elit sit amet, ultricies justo.</p>
                 <a href="#" class="btn btn-dark">Read More</a>
@@ -822,8 +822,8 @@
     </div>
 
 
-    <section id="contact">
-      <div style="background-color: #2C3539;" class="  card border">
+    <section id="contact" class="m-4">
+      <div class="  card border border-light bg-dark">
         <div class="card-header  text-white">
           <h1 class="text-center text-white fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">Contact Me
           </h1>
@@ -832,20 +832,20 @@
           <form id="contactForm" action="javascript:void(0);">
             <div class="form-group">
               <label class="text-white " for="name">Name</label>
-              <input type="text" class="form-control  border text-white" style="background-color: #2C3539;" id="name"
+              <input type="text" class="form-control  border border-light bg-dark text-white" id="name"
                 name="name" required />
             </div>
             <div class="form-group">
               <label class="text-white " for="email">Email address</label>
-              <input type="email" class="form-control  border text-white" style="background-color: #2C3539;" id="email"
+              <input type="email" class="form-control  border border-light bg-dark text-white" id="email"
                 name="email" required />
             </div>
             <div class="form-group">
               <label class="text-white " for="message">Message</label>
-              <textarea class="form-control  border text-white" style="background-color: #2C3539;" id="message"
+              <textarea class="form-control  border border-light bg-dark text-white" id="message"
                 name="message" rows="5" required></textarea>
             </div>
-            <button type="submit" class="btn btn-dark text-white border" style="background-color: #2C3539;">Send
+            <button type="submit" class="btn btn-dark text-white border border-light bg-dark">Send
               Message</button>
           </form>
         </div>
@@ -860,7 +860,7 @@
 
 
     <!-- footer section-->
-    <footer id="footer" style="background-color: #2C3539;" class="border-top mt-4">
+    <footer id="footer" class="border-top bg-dark mt-4">
       <div>
         <p class="text-white">
           I'm currently looking for software development partnerships and opportunities!
@@ -881,8 +881,8 @@
         </div>
       </div>
     </footer>
-  </div>
-  </div>
+
+
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <script src="script.js"></script>

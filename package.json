@@ -1,0 +1,12 @@
+{
+  "name": "webportfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "blog.js",
+  "scripts": {
+  "dev": "next dev"
+}
+,
+  "author": "",
+  "license": "ISC"
+}

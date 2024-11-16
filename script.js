@@ -94,12 +94,15 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 });
 
 const elementsWithBgDark = document.querySelectorAll('.bg-dark');
-const elementsWithBtnDark = document.querySelectorAll('.btn-dark');
+const elementsWithBtnLight = document.querySelectorAll('.btn-dark');
 const elementsWithTextWhite = document.querySelectorAll('.text-white');
 const elementsWithBorderWhite = document.querySelectorAll('.border-white');
 const elementsWithFaSun = document.querySelectorAll('.fa-sun');
+const elementsWithBorderlight=document.querySelectorAll('.border-light');
 
 function toggleClasses() {
+
+
   elementsWithBgDark.forEach(element => {
     if (element.classList.contains('bg-dark')) {
       element.classList.remove('bg-dark');
@@ -108,14 +111,19 @@ function toggleClasses() {
       element.classList.remove('bg-light');
       element.classList.add('bg-dark');
     }
-  });
-  elementsWithBtnDark.forEach(element => {
-    if (element.classList.contains('btn-dark')) {
-      element.classList.remove('btn-dark');
-      element.classList.add('btn-light');
-    } else {
+  })
+
+
+
+
+
+  elementsWithBtnLight.forEach(element => {
+    if (element.classList.contains('btn-light')) {
       element.classList.remove('btn-light');
       element.classList.add('btn-dark');
+    } else {
+      element.classList.remove('btn-dark');
+      element.classList.add('btn-light');
     }
   });
   elementsWithBorderWhite.forEach(element => {
@@ -127,6 +135,18 @@ function toggleClasses() {
       element.classList.add('border-white');
     }
   });
+
+
+  elementsWithBorderlight.forEach(element => {
+    if (element.classList.contains('border-light')) {
+      element.classList.remove('border-light');
+      element.classList.add('border-dark');
+    } else {
+      element.classList.remove('border-dark');
+      element.classList.add('border-light');
+    }
+  });
+
   elementsWithTextWhite.forEach(element => {
     if (element.classList.contains('text-white')) {
       element.classList.remove('text-white');
