@@ -162,14 +162,14 @@
     </section>
 
     <!-- skills section -->
-    <section id="skills" class="mt-3">
+    <section id="skills" class="">
       <div class="card border border-dark bg-dark border-0">
         <div class="card-header ">
           <h1
             class="text-center text-white  w-50  rounded-pill mr-auto ml-auto fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long ">
             My Skills</h1>
         </div>
-        <div class="card-body " id="skillsection">
+        <div class="container card-body d-flex justify-content-center align-items-center " id="skillsection">
           <script>
             const skillsData = [{
                 name: "HTML5",
@@ -269,354 +269,36 @@
               },
             ];
 
-            let cards = ""
-            cards += skillsData.map(skill => {
-              return `<div class="bg-dark">
-                      <div class="card grow-on-hover" style="width:100%">
-                        <div class="card-content">
-                          <div class="media d-flex align-items-stretch">
-                            <div class="py-1 px-2 media-body ${skill.color}">
-                              <h6><b class="text-white">${skill.name}</b></h6>
-                              <h6 class="text-bold-400">&nbsp;</h6>
-                              <div class="progress mt-1 mb-0" style="height: 7px;">
-                                <div class="progress-bar " role="progressbar" style="width:${skill.progress}%" aria-valuenow="${skill.progress}" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                            </div>
-                            <div class="p-2 text-center bg-white rounded-right">
-                              <i class="${skill.iconClass}"></i>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>`;
-            });
-            document.getElementById("skillsection").innerHTML = `<div class="d-flex overflow-scroll">${cards}</div>
-    `;
-          </script>
-          <!--<div class="row m-auto justify-content-center  ">  
-                    <div class="col-xl-3 col-lg-6 col-sm-6 col-12">                
-                      <div class="card grow-on-hover m-1">
-                        <div class="card-content">
+            let cards = skillsData.map(skill => {
+              return `<div class="col-md-3 col-sm-6">
+                        <div class="card grow-on-hover" style="width:100%;">
+                          <div class="card-content">
                             <div class="media d-flex align-items-stretch">
-                                <div class="py-1 px-2 media-body bg-danger">
-                                    <h6><b class="text-white">HTML5</b></h6>
-                                    <h6 class="text-bold-400">&nbsp;</h6>
-                                    <div class="progress mt-1 mb-0" style="height: 7px;">
-                                        <div class="progress-bar bg-white" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div class="p-2 text-center bg-white rounded-right">
-                                    <i class="fab fa-html5 text-danger fa-3x m-auto text-center"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                      
-                    </div>    
-                  
-                  <div class="col-xl-3 col-lg-6 col-sm-6 col-12">            
-                    
-                    <div class="card grow-on-hover m-1">
-                      <div class="card-content">
-                        <div class="media d-flex align-items-stretch">
-                          <div class="py-1 px-2 media-body bg-dark">
-                            <h6><b class="text-white">CSS3</b></h6>
-                            <h6 class="text-bold-400">&nbsp;</h6>
-                            <div class="progress mt-1s mb-0" style="height: 7px;">
-                              <div class="progress-bar bg-white" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </div>
-                          <div class="p-2 text-center bg-white rounded-right">
-                            <i class="fab fa-css3-alt text-dark fa-3x m-auto text-center"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-    
-                  <div class="col-xl-3 col-lg-6 col-sm-6 col-12">            
-                    
-                    <div class="card grow-on-hover m-1">
-                      <div class="card-content">
-                        <div class="media d-flex align-items-stretch">
-                          <div class="py-1 px-2 media-body bg-warning">
-                            <h6><b class="text-white">Javascript</b></h6>
-                            <h6 class="text-bold-400">&nbsp;</h6>
-                            <div class="progress mt-1s mb-0" style="height: 7px;">
-                              <div class="progress-bar bg-white" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </div>
-                          <div class="p-2 text-center bg-white rounded-right">
-                            <i class="fab fa-js text-warning fa-3x m-auto text-center"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-    
-                  <div class="col-xl-3 col-lg-6 col-sm-6 col-12">            
-                    <div class="card grow-on-hover m-1">
-                      <div class="card-content">
-                        <div class="media d-flex align-items-stretch">
-                          <div class="py-1 px-2 media-body bg-purple">
-                            <h6><b class="text-white">Bootstrap</b></h6>
-                            <h6 class="text-bold-400">&nbsp;</h6>
-                            <div class="progress mt-1s mb-0" style="height: 7px;">
-                              <div class="progress-bar bg-white" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </div>
-                          <div class="p-2 text-center bg-white rounded-right">                            
-                            <i class="fab fa-bootstrap text-purple fa-3x  m-auto text-center"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-    
-                  <div class="col-xl-3 col-lg-6 col-sm-6 col-12">            
-                    <div class="card grow-on-hover m-1">
-                        <div class="card-content">
-                            <div class="media d-flex align-items-stretch">
-                                <div class="py-1 px-2 media-body bg-info">
-                                    <h6><b class="text-white">React</b></h6>
-                                    <h6 class="text-bold-400">&nbsp;</h6>
-                                    <div class="progress mt-1 mb-0" style="height: 7px;">
-                                        <div class="progress-bar bg-white" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div class="p-2 text-center bg-white rounded-right">
-                                    <i class="fab fa-react text-info fa-3x m-auto text-center"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-    
-                
-
-              <div class="col-xl-3 col-lg-6 col-sm-6 col-12">            
-                <div class="card grow-on-hover m-1">
-                    <div class="card-content">
-                        <div class="media d-flex align-items-stretch">
-                            <div class="py-1 px-2 media-body bg-warning">
-                                <h6><b class="text-white">MongoDB</b></h6>
-                                <h6 class="text-bold-400">&nbsp;</h6>
+                              <div class="py-1 px-2 media-body ${skill.color}">
+                                <h6><b class="text-white">${skill.name}</b></h6>
                                 <div class="progress mt-1 mb-0" style="height: 7px;">
-                                    <div class="progress-bar bg-white" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                  <div class="progress-bar bg-dark" role="progressbar" style="width:${skill.progress}%" aria-valuenow="${skill.progress}" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
-                            </div>
-                            <div class="p-2 text-center bg-white rounded-right">
-                                <i class="fas fa-database text-warning fa-3x m-auto text-center"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-
-
-            
-            <div class="col-xl-3 col-lg-6 col-sm-6 col-12">            
-              <div class="card grow-on-hover m-1">
-                  <div class="card-content">
-                      <div class="media d-flex align-items-stretch">
-                          <div class="py-1 px-2 media-body bg-info">
-                              <h6><b class="text-white">Java</b></h6>
-                              <h6 class="text-bold-400">&nbsp;</h6>
-                              <div class="progress mt-1 mb-0" style="height: 7px;">
-                                  <div class="progress-bar bg-white" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                               </div>
+                              <div class="p-2 text-center bg-white rounded-right">
+                                <i class="${skill.iconClass}"></i>
+                              </div>
+                            </div>
                           </div>
-                          <div class="p-2 text-center bg-white rounded-right">
-                              <i class="fas fa-java text-info fa-3x m-auto text-center"></i>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div> 
-
-
-          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">            
-            <div class="card grow-on-hover m-1">
-                <div class="card-content">
-                    <div class="media d-flex align-items-stretch">
-                        <div class="py-1 px-2 media-body bg-success">
-                            <h6><b class="text-white">AWS</b></h6>
-                            <h6 class="text-bold-400">&nbsp;</h6>
-                            <div class="progress mt-1 mb-0" style="height: 7px;">
-                                <div class="progress-bar bg-white" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
                         </div>
-                        <div class="p-2 text-center bg-white rounded-right">
-                            <i class="fas fa-aws text-success fa-3x m-auto text-center"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> 
-
-          
-          <div class="col-xl-3 col-lg-6 col-sm-6 col-12">            
-            <div class="card grow-on-hover m-1">
-                <div class="card-content">
-                    <div class="media d-flex align-items-stretch">
-                        <div class="py-1 px-2 media-body bg-danger">
-                            <h6><b class="text-white">C</b></h6>
-                            <h6 class="text-bold-400">&nbsp;</h6>
-                            <div class="progress mt-1 mb-0" style="height: 7px;">
-                                <div class="progress-bar bg-white" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="p-2 text-center bg-white rounded-right">
-                            <i class="fas fa-code text-danger fa-3x m-auto text-center"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> 
-
-
-                    
-<div class="col-xl-3 col-lg-6 col-sm-6 col-12">            
-  <div class="card grow-on-hover m-1">
-      <div class="card-content">
-          <div class="media d-flex align-items-stretch">
-              <div class="py-1 px-2 media-body bg-secondary">
-                  <h6><b class="text-white">NodeJS</b></h6>
-                  <h6 class="text-bold-400">&nbsp;</h6>
-                  <div class="progress mt-1 mb-0" style="height: 7px;">
-                      <div class="progress-bar bg-white" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
+                      </div>`;
+            }).join("");
+        
+            document.getElementById("skillsection").innerHTML = `
+              <div class="row justify-content-center g-4">
+                ${cards}
               </div>
-              <div class="p-2 text-center bg-white rounded-right">
-                  <i class="fab fa-node-js text-secondary fa-3x m-auto text-center"></i>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-<div class="col-xl-3 col-lg-6 col-sm-6 col-12">            
-  <div class="card grow-on-hover m-1">
-      <div class="card-content">
-          <div class="media d-flex align-items-stretch">
-              <div class="py-1 px-2 media-body bg-success">
-                  <h6><b class="text-white">MySQL</b></h6>
-                  <h6 class="text-bold-400">&nbsp;</h6>
-                  <div class="progress mt-1 mb-0" style="height: 7px;">
-                      <div class="progress-bar bg-white" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-              </div>
-              <div class="p-2 text-center bg-white rounded-right">
-                  <i class="fas fa-database text-success fa-3x m-auto text-center"></i>
-              </div>
-          </div>
-      </div>
-  </div>
-</div> 
-
-
-<div class="col-xl-3 col-lg-6 col-sm-6 col-12">            
-  <div class="card grow-on-hover m-1">
-      <div class="card-content">
-          <div class="media d-flex align-items-stretch">
-              <div class="py-1 px-2 media-body bg-danger">
-                  <h6><b class="text-white">Angular</b></h6>
-                  <h6 class="text-bold-400">&nbsp;</h6>
-                  <div class="progress mt-1 mb-0" style="height: 7px;">
-                      <div class="progress-bar bg-white" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-              </div>
-              <div class="p-2 text-center bg-white rounded-right">
-                  <i class="fab fa-angular text-danger fa-3x m-auto text-center"></i>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-
-
-<div class="col-xl-3 col-lg-6 col-sm-6 col-12">            
-  <div class="card grow-on-hover m-1">
-      <div class="card-content">
-          <div class="media d-flex align-items-stretch">
-              <div class="py-1 px-2 media-body bg-dark">
-                  <h6><b class="text-white">Azure</b></h6>
-                  <h6 class="text-bold-400">&nbsp;</h6>
-                  <div class="progress mt-1 mb-0" style="height: 7px;">
-                      <div class="progress-bar bg-white" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-              </div>
-              <div class="p-2 text-center bg-white rounded-right">
-                  <i class="fas fa-cloud text-dark fa-3x m-auto text-center"></i>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-
-
-<div class="col-xl-3 col-lg-6 col-sm-6 col-12">            
-  <div class="card grow-on-hover m-1">
-      <div class="card-content">
-          <div class="media d-flex align-items-stretch">
-              <div class="py-1 px-2 media-body bg-secondary">
-                  <h6><b class="text-white">C#</b></h6>
-                  <h6 class="text-bold-400">&nbsp;</h6>
-                  <div class="progress mt-1 mb-0" style="height: 7px;">
-                      <div class="progress-bar bg-white" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-              </div>
-              <div class="p-2 text-center bg-white rounded-right">
-                  <i class="fab fa-cuttlefish text-secondary fa-3x m-auto text-center"></i>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-
-
-<div class="col-xl-3 col-lg-6 col-sm-6 col-12">            
-  <div class="card grow-on-hover m-1">
-      <div class="card-content">
-          <div class="media d-flex align-items-stretch">
-              <div class="py-1 px-2 media-body bg-purple">
-                  <h6><b class="text-white">ASP.NET</b></h6>
-                  <h6 class="text-bold-400">&nbsp;</h6>
-                  <div class="progress mt-1 mb-0" style="height: 7px;">
-                      <div class="progress-bar bg-white" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-              </div>
-              <div class="p-2 text-center bg-white rounded-right">
-                  <i class="fas fa-code text-purple fa-3x m-auto text-center"></i>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-
-                    
-                      <div class="col-xl-3 col-lg-6 col-sm-6 col-12">            
-                        <div class="card grow-on-hover m-1">
-                            <div class="card-content">
-                                <div class="media d-flex align-items-stretch">
-                                    <div class="py-1 px-2 media-body bg-info">
-                                        <h6><b class="text-white">Git</b></h6>
-                                        <h6 class="text-bold-400">&nbsp;</h6>
-                                        <div class="progress mt-1 mb-0" style="height: 7px;">
-                                            <div class="progress-bar bg-white" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                    <div class="p-2 text-center bg-white rounded-right">
-                                        <i class="fab fa-github text-info fa-3x m-auto text-center"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                      </div>   
-                  
-                </div>-->
+            `;
+          </script>
         </div>
+        
+      
+         
       </div>
 
     </section>
