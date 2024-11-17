@@ -29,10 +29,7 @@
   <script type="module" src="node_modules/lord-icon-element/lord-icon-element.js"></script>
 </head>
 
-<body class="border border-gray bg-dark m-2 text-center">
-  
-
-
+<body class="bg-dark m-2 text-center">
     <div class=" mt-2 d-none d-md-flex flex-column flex-md-row align-items-center m-4" >
       <div class="text-right ml-auto">
 
@@ -42,7 +39,6 @@
         <small class="text-white mb-2 mb-md-0">&nbsp;&nbsp;<i
             class="fa fa-envelope-open me-2"></i>alexkipchirchirkemboi@gmail.com</small>
       </div>
-
     </div>
 
     <!-- Navbar componenet -->
@@ -87,7 +83,7 @@
             <!-- Adjust column sizes for different screen sizes -->
             <div class=" col-12">
               <div class=" text-center">
-                <img class="imagealex m-2 img-fluid w-25" src="./images/alex.jpg" alt="Alex" />
+                <img class=" m-2 img-fluid w-50" src="./images/0.jpg" alt="Alex" />
               </div>
             </div>
             <div class=" col-12">
@@ -504,37 +500,46 @@
     </div>
 
 
-    <section id="contact" class="m-4">
-      <div class="  card border border-light bg-dark">
-        <div class="card-header  text-white">
-          <h1 class="text-center text-white fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">Contact Me
-          </h1>
+ 
+    <section id="contact" class="m-4 d-flex flex-wrap align-items-center">
+      <div class="container">
+        <div class="row justify-content-center align-items-center g-4">
+           <!-- Image -->
+           <div class="col-12 col-md-6 text-center">
+            <img src="/images/alex.jpg" class="img-fluid rounded shadow" alt="Contact Image">
+          </div>
+          <!-- Contact Form -->
+          <div class="col-12 col-md-6">
+            <div class="card border rounded-left border-light bg-dark">
+              <div class="card-header text-white">
+                <h1 class="text-center text-white fs-3 fs-md-2 fs-lg-1 fw-bold lh-tight mb-2">
+                  Contact Me
+                </h1>
+              </div>
+              <div class="card-body">
+                <form id="contactForm" action="javascript:void(0);">
+                  <div class="mb-3">
+                    <label class="text-white" for="name">Name</label>
+                    <input type="text" class="form-control border border-light bg-dark text-white" id="name" name="name" required />
+                  </div>
+                  <div class="mb-3">
+                    <label class="text-white" for="email">Email address</label>
+                    <input type="email" class="form-control border border-light bg-dark text-white" id="email" name="email" required />
+                  </div>
+                  <div class="mb-3">
+                    <label class="text-white" for="message">Message</label>
+                    <textarea class="form-control border border-light bg-dark text-white" id="message" name="message" rows="5" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-dark text-white border border-light bg-dark w-100">Send Message</button>
+                </form>
+              </div>
+            </div>
+          </div>
+         
         </div>
-        <div class=" card-body">
-          <form id="contactForm" action="javascript:void(0);">
-            <div class="form-group">
-              <label class="text-white " for="name">Name</label>
-              <input type="text" class="form-control  border border-light bg-dark text-white" id="name"
-                name="name" required />
-            </div>
-            <div class="form-group">
-              <label class="text-white " for="email">Email address</label>
-              <input type="email" class="form-control  border border-light bg-dark text-white" id="email"
-                name="email" required />
-            </div>
-            <div class="form-group">
-              <label class="text-white " for="message">Message</label>
-              <textarea class="form-control  border border-light bg-dark text-white" id="message"
-                name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-dark text-white border border-light bg-dark">Send
-              Message</button>
-          </form>
-        </div>
-
       </div>
     </section>
-
+    
 
 
 
